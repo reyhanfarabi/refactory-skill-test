@@ -10,7 +10,6 @@ function nearestFib(numArr) {
     let first = 0;
     let second = 1;
     let third = first + second;
-    let nearFib = 0;
 
     while (third <= totalNum) {
         first = second;
