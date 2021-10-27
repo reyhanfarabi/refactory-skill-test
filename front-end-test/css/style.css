@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f5f5;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #1d2d50;
+}
+
+.card-container {
+  width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 20px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 20px -2px rgba(0, 0, 0, 0.2);
+}
+
+.card-container .form-header {
+  font-size: 1.5rem;
+  padding: 0 0 0.8rem;
+}
+
+.card-container .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-container .form-container .field-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.8rem 0;
+}
+
+.card-container .form-container .field-wrapper .label {
+  padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-container .form-container .field-wrapper .label a {
+  text-decoration: none;
+  color: #ee6f57;
+  font-weight: 600;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card-container .form-container .field-wrapper .label a:hover {
+  color: #e23717;
+}
+
+.card-container .form-container .field-wrapper input {
+  padding: 0.8rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.card-container .form-container .checkbox-label {
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.card-container .form-container .checkbox-label input {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.card-container .form-container button {
+  background-color: #ee6f57;
+  color: white;
+  margin: 0.8rem 0 0;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ee6f57;
+  border-radius: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.card-container .form-container button:hover {
+  background-color: #e23717;
+}
+/*# sourceMappingURL=style.css.map */
