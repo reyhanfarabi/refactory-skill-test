@@ -19,3 +19,19 @@ Adapun soal-soal yang perlu saya kerjakan yaitu :
   - Mencari semua barang yang dibeli pada tanggal 2020
   - Mencari semua barang dengan warna coklat
  
+- ### Fullstack JS (Front End)
+  Pada bagian ini, tugas yang diberikan adalah membuat sebuah tampilan Front End Login dan Landing Page dengan tambahan utama yaitu fitur login. Adapun fitur lengkap dari tugas ini adalah:
+  - Single Page App
+  - Sign In Page
+  - Sign Up Page
+  - Reset Password
+  - Login with Google
+  - Login with Facebook
+  - Landing Page -> menampilkan profile picture (jika ada), email, dan user id dari user yang sedang login
+  - Sign Out
+  Untuk menyelesaikan tugas ini, teknologi yang saya gunakan adalah:
+  - HTML
+  - (S)CSS
+  - Vanilla Javascript
+  - Firebase (sebagai authentication)
+  
