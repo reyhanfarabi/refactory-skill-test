@@ -85,7 +85,7 @@ body {
 .card-container .form-container .field-wrapper .label {
   padding-bottom: 0.5rem;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,7 +139,7 @@ body {
           transform: translateY(2px);
 }
 
-.card-container .form-container button {
+.card-container .form-container .btn-login {
   background-color: #ee6f57;
   color: white;
   margin-top: 0.8rem;
@@ -153,13 +153,126 @@ body {
 }
 
 @media (max-width: 320px) {
-  .card-container .form-container button {
+  .card-container .form-container .btn-login {
     margin-top: 0.4rem;
     font-size: 0.8rem;
   }
 }
 
-.card-container .form-container button:hover {
+.card-container .form-container .btn-login:hover {
   background-color: #e23717;
+}
+
+.card-container .form-container .break-line {
+  margin: 1.5rem 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-container .form-container .break-line span {
+  padding: 0 1rem;
+}
+
+.card-container .form-container .break-line .line {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(29, 45, 80, 0.5);
+  border: none;
+}
+
+.card-container .form-container .login-with {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-container .form-container .login-with button {
+  height: 46px;
+  width: 48%;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 320px) {
+  .card-container .form-container .login-with button {
+    height: 40px;
+  }
+}
+
+.card-container .form-container .login-with button img {
+  max-height: 24px;
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .card-container .form-container .login-with button img {
+    padding: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .card-container .form-container .login-with button img {
+    max-height: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-container .form-container .login-with button span {
+    display: none;
+  }
+}
+
+.card-container .form-container .login-with .google-btn {
+  background-color: white;
+  border: 2px solid #4385f4;
+  color: #4385f4;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card-container .form-container .login-with .google-btn:hover {
+  background-color: #d4e3fc;
+}
+
+.card-container .form-container .login-with .facebook-btn {
+  background-color: #1877f2;
+  border: 2px solid #1877f2;
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card-container .form-container .login-with .facebook-btn:hover {
+  background-color: #0b5fcc;
 }
 /*# sourceMappingURL=style.css.map */

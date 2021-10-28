@@ -74,7 +74,7 @@ body {
       .label {
         padding-bottom: 0.5rem;
         font-size: 0.8rem;
-        font-weight: 500;
+        font-weight: 600;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -116,7 +116,7 @@ body {
       }
     }
 
-    button {
+    .btn-login {
       background-color: $accent-color;
       color: white;
       margin-top: 0.8rem;
@@ -134,6 +134,89 @@ body {
 
       &:hover {
         background-color: darken($accent-color, 15%);
+      }
+    }
+
+    .break-line {
+      margin: 1.5rem 0;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        padding: 0 1rem;
+      }
+
+      .line {
+        height: 1px;
+        width: 100%;
+        background-color: rgba($dark-color, 0.5);
+        border: none;
+      }
+    }
+
+    .login-with {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      button {
+        height: 46px;
+        width: 48%;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        @include for-sm-phone() {
+          height: 40px;
+        }
+
+        img {
+          max-height: 24px;
+          padding-right: 0.5rem;
+
+          @include for-phone() {
+            padding: 0;
+          }
+
+          @include for-sm-phone() {
+            max-height: 18px;
+          }
+        }
+
+        span {
+          @include for-phone() {
+            display: none;
+          }
+        }
+      }
+
+      .google-btn {
+        background-color: white;
+        border: 2px solid #4385f4;
+        color: #4385f4;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: lighten(#4385f4, 30%);
+        }
+      }
+
+      .facebook-btn {
+        background-color: #1877f2;
+        border: 2px solid #1877f2;
+        color: white;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: darken(#1877f2, 10%);
+        }
       }
     }
   }
