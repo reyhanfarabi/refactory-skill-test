@@ -8,12 +8,10 @@ const whenSignOut = document.querySelector('#whenSignOut');
 // store button element
 const googleButton = document.querySelector('#googleSignIn');
 const facebookButton = document.querySelector('#facebookSignIn');
+const signInButton = document.querySelector('#regularSignIn');
 const signOutButton = document.querySelector('#signOutButton');
 
 const userWelcome = document.querySelector('#userWelcome');
-
-
-
 
 // sign in with google
 const googleSignIn = () => {
@@ -36,18 +34,18 @@ signOutButton.addEventListener('click', () => {
     auth.signOut();
 })
 
-
-
-
 // change ui state
 auth.onAuthStateChanged(user => {
 
     console.log(user);
+    console.dir(user);
     if (user) {
         // when sign in
         whenSignIn.hidden = false;
         whenSignOut.hidden = true;
         userWelcome.textContent = `Hello, ${user.displayName}`;
+        userWelcome.innerHTML = 
+                `<h1>Hello, ${user.displayName}</h1>`;
     } else {
         // when sign out
         whenSignIn.hidden = true;
