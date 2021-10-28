@@ -21,7 +21,7 @@ Adapun soal-soal yang perlu saya kerjakan yaitu :
  
 - ### Fullstack JS (Front End)
   Pada bagian ini, tugas yang diberikan adalah membuat sebuah tampilan Front End Login dan Landing Page dengan tambahan utama yaitu fitur login. Adapun fitur lengkap dari tugas ini adalah:
-  - Single Page App
+  - Single Page Web App
   - Sign In Page
   - Sign Up Page
   - Reset Password
