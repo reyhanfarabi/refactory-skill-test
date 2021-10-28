@@ -26,6 +26,9 @@ $facebook-color: #1877f2;
 
 body {
   background-color: $background-color;
+  background-image: url("../assets/background.svg");
+  background-size: cover;
+  background-position: center;
   font-family: "Montserrat", sans-serif;
   height: 100vh;
   display: flex;

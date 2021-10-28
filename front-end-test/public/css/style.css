@@ -7,6 +7,9 @@
 
 body {
   background-color: #f6f5f5;
+  background-image: url("../assets/background.svg");
+  background-size: cover;
+  background-position: center;
   font-family: "Montserrat", sans-serif;
   height: 100vh;
   display: -webkit-box;

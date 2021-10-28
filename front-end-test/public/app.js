@@ -30,6 +30,7 @@ let haveAccount = true;
 
 // sign in with google
 const googleSignIn = () => {
+    toggleRequired(false);
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(googleProvider);
 }
@@ -38,6 +39,7 @@ googleButton.addEventListener('click', googleSignIn);
 
 // sign in with facebook
 const facebookSignIn = () => {
+    toggleRequired(false);
     const facebookProvider = new firebase.auth.FacebookAuthProvider();
     auth.signInWithPopup(facebookProvider);
 }
@@ -51,12 +53,14 @@ const regularSignIn = () => {
     auth.signInWithEmailAndPassword(email, password);
 }
 
+// sign up with email/password
 const signUp = () => {
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
     auth.createUserWithEmailAndPassword(email, password);
 }
 
+// submit button for sign in or sign up
 regularButton.addEventListener('click', () => {
     if (haveAccount === true) {
         return regularSignIn();
@@ -71,7 +75,16 @@ signOutButton.addEventListener('click', () => {
     auth.signOut();
     document.querySelector('#email').value = '';
     document.querySelector('#password').value = '';
+    toggleRequired(true);
 })
+
+
+// toggle input require
+function toggleRequired(bool) {
+    document.querySelector('#email').required = bool;
+    document.querySelector('#password').required = bool;
+}
+
 
 // change ui state
 auth.onAuthStateChanged(user => {
@@ -84,10 +97,15 @@ auth.onAuthStateChanged(user => {
                 `<img src="${user.photoURL}">` +
                 `<h1>Hi, ${user.email}</h1>` +
                 `<h2>User ID : ${user.providerData[0].uid}</h2>`;
+            console.log(user.photoURL);
+            console.log(user.email);
+            console.log(user.providerData[0].uid);
         } else {
             userWelcome.innerHTML = 
                 `<h1>Hi, ${user.email}</h1>` +
                 `<h2>User ID : ${user.providerData[0].uid}</h2>`;
+            console.log(user.email);
+            console.log(user.providerData[0].uid);
         }
         
     } else {
