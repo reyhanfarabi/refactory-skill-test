@@ -295,11 +295,30 @@ body {
 
 .landing-container #userWelcome h1 {
   margin: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .landing-container #userWelcome h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .landing-container #userWelcome h1 {
+    font-size: 1rem;
+  }
 }
 
 .landing-container #userWelcome h2 {
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+@media (max-width: 320px) {
+  .landing-container #userWelcome h2 {
+    font-size: 0.6rem;
+  }
 }
 
 .landing-container #signOutButton {
@@ -329,6 +348,12 @@ body {
   font-weight: 500;
 }
 
+@media (max-width: 320px) {
+  .no-account label {
+    font-size: 0.6rem;
+  }
+}
+
 .no-account a {
   text-decoration: none;
   color: #ee6f57;
@@ -336,6 +361,12 @@ body {
   font-weight: 600;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+@media (max-width: 320px) {
+  .no-account a {
+    font-size: 0.6rem;
+  }
 }
 
 .no-account a:hover {

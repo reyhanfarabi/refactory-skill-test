@@ -228,11 +228,24 @@ body {
 
     h1 {
       margin: 1rem;
+      text-align: center;
+
+      @include for-phone() {
+        font-size: 1.2rem;
+      }
+
+      @include for-sm-phone() {
+        font-size: 1rem;
+      }
     }
 
     h2 {
       font-size: 0.8rem;
       font-weight: 500;
+
+      @include for-sm-phone() {
+        font-size: 0.6rem;
+      }
     }
   }
 
@@ -260,6 +273,10 @@ body {
   label {
     font-size: 0.8rem;
     font-weight: 500;
+
+    @include for-sm-phone() {
+      font-size: 0.6rem;
+    }
   }
 
   a {
@@ -268,6 +285,10 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
     transition: 0.2s;
+
+    @include for-sm-phone() {
+      font-size: 0.6rem;
+    }
 
     &:hover {
       color: darken($accent-color, 25%);

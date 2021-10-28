@@ -45,8 +45,6 @@ signOutButton.addEventListener('click', () => {
 
 // change ui state
 auth.onAuthStateChanged(user => {
-
-    console.log(user);
     if (user) {
         // when sign in
         whenSignIn.hidden = false;
