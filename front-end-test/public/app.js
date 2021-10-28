@@ -34,15 +34,6 @@ const regularSignIn = () => {
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
     auth.signInWithEmailAndPassword(email, password)
-        // .then((userCredential) => {
-        //     // Signed in
-        //     var user = userCredential.user;
-        //     // ...
-        // })
-        // .catch((error) => {
-        //     var errorCode = error.code;
-        //     var errorMessage = error.message;
-        // });
 }
 regularButton.addEventListener('click', regularSignIn)
 
@@ -61,14 +52,8 @@ auth.onAuthStateChanged(user => {
         // when sign in
         whenSignIn.hidden = false;
         whenSignOut.hidden = true;
-        if (userWelcome.displayName == null) {
-            userWelcome.innerHTML = 
+        userWelcome.innerHTML = 
                 `<h1>Hi, ${user.email}</h1>`;
-        } else {
-            userWelcome.innerHTML = 
-                `<h1>Hi, ${user.displayName}</h1>`;
-        }
-        
     } else {
         // when sign out
         whenSignIn.hidden = true;

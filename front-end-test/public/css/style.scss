@@ -232,3 +232,24 @@ body {
     }
   }
 }
+
+.no-account {
+  padding: 1.5rem 0 0;
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: none;
+    color: $accent-color;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.2s;
+
+    &:hover {
+      color: darken($accent-color, 25%);
+    }
+  }
+}

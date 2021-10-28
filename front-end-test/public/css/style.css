@@ -289,4 +289,26 @@ body {
 .landing-container #signOutButton:hover {
   background-color: #e23717;
 }
+
+.no-account {
+  padding: 1.5rem 0 0;
+}
+
+.no-account span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.no-account a {
+  text-decoration: none;
+  color: #ee6f57;
+  font-size: 0.8rem;
+  font-weight: 600;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.no-account a:hover {
+  color: #b32c12;
+}
 /*# sourceMappingURL=style.css.map */
