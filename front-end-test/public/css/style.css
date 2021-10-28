@@ -294,7 +294,7 @@ body {
   padding: 1.5rem 0 0;
 }
 
-.no-account span {
+.no-account label {
   font-size: 0.8rem;
   font-weight: 500;
 }
