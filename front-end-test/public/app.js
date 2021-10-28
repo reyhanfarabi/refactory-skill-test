@@ -28,6 +28,10 @@ let haveAccount = true;
 
 
 
+//
+// APP AUTHENTICATION
+//
+
 // sign in with google
 const googleSignIn = () => {
     toggleRequired(false);
@@ -119,6 +123,10 @@ auth.onAuthStateChanged(user => {
 
 
 
+//
+// SIGN IN OR SIGN UP
+//
+
 // change mode between sign in or sign up
 modeButton.addEventListener('click', () => {
     if (haveAccount === true) {
@@ -146,3 +154,26 @@ function toSignIn() {
     regularButton.innerHTML = 'Sign In';
     forgotPassButton.hidden = false;
 }
+
+
+
+
+//
+// FORGOT PASSWORD
+//
+
+function sendEmail() {
+    const email = prompt('Enter your email addres to send reset link');
+    auth.sendPasswordResetEmail(email)
+        .then(() => {
+            alert('Password Reset Email Sent');
+        })
+        .catch((error) => {
+            console.error(error);
+            alert('Error sending email, make sure the email is correct')
+        })
+}
+
+forgotPassButton.addEventListener('click', () => {
+    sendEmail()
+})
