@@ -272,6 +272,36 @@ body {
           align-items: center;
 }
 
+.landing-container #userWelcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing-container #userWelcome img {
+  min-width: 96px;
+  border-radius: 50%;
+}
+
+.landing-container #userWelcome h1 {
+  margin: 1rem;
+}
+
+.landing-container #userWelcome h2 {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
 .landing-container #signOutButton {
   width: 128px;
   height: 40px;

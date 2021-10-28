@@ -47,13 +47,21 @@ signOutButton.addEventListener('click', () => {
 auth.onAuthStateChanged(user => {
 
     console.log(user);
-    console.dir(user);
     if (user) {
         // when sign in
         whenSignIn.hidden = false;
         whenSignOut.hidden = true;
-        userWelcome.innerHTML = 
-                `<h1>Hi, ${user.email}</h1>`;
+        if (user.photoURL !== null) {
+            userWelcome.innerHTML = 
+                `<img src="${user.photoURL}">` +
+                `<h1>Hi, ${user.email}</h1>` +
+                `<h2>User ID : ${user.providerData[0].uid}</h2>`;
+        } else {
+            userWelcome.innerHTML = 
+                `<h1>Hi, ${user.email}</h1>` +
+                `<h2>User ID : ${user.providerData[0].uid}</h2>`;
+        }
+        
     } else {
         // when sign out
         whenSignIn.hidden = true;
