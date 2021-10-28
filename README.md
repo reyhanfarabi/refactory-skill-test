@@ -28,10 +28,14 @@ Adapun soal-soal yang perlu saya kerjakan yaitu :
   - Login with Google
   - Login with Facebook
   - Landing Page -> menampilkan profile picture (jika ada), email, dan user id dari user yang sedang login
-  - Sign Out
-  Untuk menyelesaikan tugas ini, teknologi yang saya gunakan adalah:
+  - Sign Out  
+ 
+  Dalam menyelesaikan tugas ini, teknologi yang saya gunakan adalah:
   - HTML
   - (S)CSS
   - Vanilla Javascript
   - Firebase (sebagai authentication)
-  
+
+  Untuk menjalankan aplikasi web ini, dibawah ini saya sudah menyediakan link untuk mengakses aplikasi web yang telah saya buat  
+  <https://refactory-test-c6b8a.web.app/>  
+  atau bisa juga ingin mengakses manual bisa dengan git clone dengan catatan firebase-tools harus sudah terinstall diperangkat yang akan digunakan untuk menjalankan local server. 
