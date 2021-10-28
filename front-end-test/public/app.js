@@ -6,12 +6,27 @@ const whenSignIn = document.querySelector('#whenSignIn');
 const whenSignOut = document.querySelector('#whenSignOut');
 
 // store button element
+const regularButton = document.querySelector('#regularSubmit');
 const googleButton = document.querySelector('#googleSignIn');
 const facebookButton = document.querySelector('#facebookSignIn');
-const regularButton = document.querySelector('#regularSignIn');
 const signOutButton = document.querySelector('#signOutButton');
 
+// store user landing element
 const userWelcome = document.querySelector('#userWelcome');
+
+
+
+
+// declaring element for login mode change
+const forgotPassButton = document.querySelector('#forgot-password');
+const formHeader = document.querySelector('.form-header');
+const modeLabel = document.querySelector('#modeLabel');
+const modeButton = document.querySelector('#modeButton');
+
+let haveAccount = true;
+
+
+
 
 // sign in with google
 const googleSignIn = () => {
@@ -33,14 +48,29 @@ facebookButton.addEventListener('click', facebookSignIn);
 const regularSignIn = () => {
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
-    auth.signInWithEmailAndPassword(email, password)
+    auth.signInWithEmailAndPassword(email, password);
 }
-regularButton.addEventListener('click', regularSignIn)
+
+const signUp = () => {
+    const email = document.querySelector('#email').value;
+    const password = document.querySelector('#password').value;
+    auth.createUserWithEmailAndPassword(email, password);
+}
+
+regularButton.addEventListener('click', () => {
+    if (haveAccount === true) {
+        return regularSignIn();
+    } else if (haveAccount === false) {
+        return signUp();
+    }
+})
 
 
 // sign out
 signOutButton.addEventListener('click', () => {
     auth.signOut();
+    document.querySelector('#email').value = '';
+    document.querySelector('#password').value = '';
 })
 
 // change ui state
@@ -67,3 +97,34 @@ auth.onAuthStateChanged(user => {
         userWelcome.innerHTML = '';
     }
 });
+
+
+
+
+// change mode between sign in or sign up
+modeButton.addEventListener('click', () => {
+    if (haveAccount === true) {
+        haveAccount = false;
+        toSignUp();
+    } else if (haveAccount === false){
+        haveAccount = true;
+        toSignIn();
+    }
+
+})
+
+function toSignUp() {
+    formHeader.innerHTML = 'Create new account';
+    modeLabel.innerHTML = 'Already have an account?';
+    modeButton.innerHTML = 'Sign In';
+    regularButton.innerHTML = 'Sign Up';
+    forgotPassButton.hidden = true;
+}
+
+function toSignIn() {
+    formHeader.innerHTML = 'Sign in to your account';
+    modeLabel.innerHTML = "Don't have an account?";
+    modeButton.innerHTML = 'Sign Up';
+    regularButton.innerHTML = 'Sign In';
+    forgotPassButton.hidden = false;
+}

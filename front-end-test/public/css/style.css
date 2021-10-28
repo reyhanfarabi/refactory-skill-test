@@ -339,22 +339,22 @@ body {
   background-color: #e23717;
 }
 
-.no-account {
+.account-mode {
   padding: 1.5rem 0 0;
 }
 
-.no-account label {
+.account-mode label {
   font-size: 0.8rem;
   font-weight: 500;
 }
 
 @media (max-width: 320px) {
-  .no-account label {
+  .account-mode label {
     font-size: 0.6rem;
   }
 }
 
-.no-account a {
+.account-mode a {
   text-decoration: none;
   color: #ee6f57;
   font-size: 0.8rem;
@@ -364,12 +364,12 @@ body {
 }
 
 @media (max-width: 320px) {
-  .no-account a {
+  .account-mode a {
     font-size: 0.6rem;
   }
 }
 
-.no-account a:hover {
+.account-mode a:hover {
   color: #b32c12;
 }
 /*# sourceMappingURL=style.css.map */
