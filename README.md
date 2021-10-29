@@ -64,6 +64,8 @@ Adapun soal-soal yang perlu saya kerjakan yaitu :
   - Jika user sudah Sign In, user akan diarahkan ke halaman ***Landing Page*** dimana user bisa melihat Profile Picture(jika ada), Email, dan User ID
   - Jika user ingin Sign Out, user bisa menekan tombol **Sign Out** dibawah User ID
   - Setelah Sign Out, user akan diarahkan kembali ke halaman **Sign In**
-  - ***Catatan***: user bisa keluar dari website atau browser pada tahap apapun, yang mana nantinya jika ingin mengakses website ini lagi akan di cek session-nya oleh Firebase
+  - ***Catatan***:
+      - User bisa keluar dari website atau browser pada tahap apapun, yang mana nantinya jika ingin mengakses website ini lagi akan di cek session-nya oleh Firebase
+      - Jika terdapat masalah saat login menggunakan Google/Facebook, silahkan tutup ***Popup*** dan Klik lagi tombol login menggunakan Google/Facebook
   
   ![refactory-skill-test-diagram!](/refactory-skill-test-diagram.png)
